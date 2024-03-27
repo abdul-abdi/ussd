@@ -77,7 +77,7 @@ const ussdMenu = {
                   case '2*3':
                         response = 'CON Enter quantity of bean seeds (in kg):\n 1. 2kg\n 2. 4kg\n 3. 10kg\n 4. 20kg\n 5. 30kg';
                         break;
-                  case '2*1*1':
+                  case '2*1*1': 
                   case '2*1*2':
                   case '2*1*3':
                   case '2*1*4':
@@ -101,13 +101,36 @@ const ussdMenu = {
 
                   case '2*1*1*1':
                   case '2*1*1*2':
-                    handleOrderConfirmation(sessionId, phoneNumber, text, 'maize', seedTypes.maize.pricePerKg, callback);
-                  case '2*1*2*1':
+                  case '2*1*2*1': 
                   case '2*1*2*2':
-                    handleOrderConfirmation(sessionId, phoneNumber, text, 'tomatoes', seedTypes.tomatoes.pricePerGram, callback);
                   case '2*1*3*1':
                   case '2*1*3*2':
+                  case '2*1*4*1':
+                  case '2*1*4*2':
+                  case '2*1*5*1':
+                  case '2*1*5*2':
+                    handleOrderConfirmation(sessionId, phoneNumber, text, 'maize', seedTypes.maize.pricePerKg, callback);
+                    break;
+                  case '2*2*1*1':
+                  case '2*2*2*2':
+                  case '2*2*3*1':
+                  case '2*2*3*2':
+                  case '2*2*4*1':
+                  case '2*2*4*2':
+                  case '2*2*5*1':
+                  case '2*2*5*2':
+                    handleOrderConfirmation(sessionId, phoneNumber, text, 'tomatoes', seedTypes.tomatoes.pricePerGram, callback);
+                    break;
+                    case '2*3*1*1':
+                    case '2*3*2*2':
+                    case '2*3*3*1':
+                    case '2*3*3*2':
+                    case '2*3*4*1':
+                    case '2*3*4*2':
+                    case '2*3*5*1':
+                    case '2*3*5*2':
                     handleOrderConfirmation(sessionId, phoneNumber, text, 'beans', seedTypes.beans.pricePerKg, callback);
+                    break;
                     case '3':
                         response = 'CON Choose a farming tip:\n1. Soil Preparation\n2. Pest Control\n3. Irrigation';
                         break;
